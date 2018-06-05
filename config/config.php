@@ -1,12 +1,12 @@
 <?php
 /* konfigurasi base project */
-define('BASE', "localhost/kakyanno_v01");
+define('BASE', "localhost/mammoth");
 
 /* controller default jika tidak ada controller yang dipanggil pada url browser */
 define('DEFAULT_CONTROLLER', "home");
 
 /* konfigurasi DB */
-define('DB_NAME', "framework");
+define('DB_NAME', "mammoth");
 define('DB_USER', "root");
 define('DB_PASS', "");
 define('DB_HOST', "localhost");
