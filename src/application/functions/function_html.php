@@ -136,14 +136,28 @@ function start_modal($id, $action="") {
 	';
 }
 // modal end form
-function end_modal() {
+function end_modal($save=true, $special="") {
 	echo '
-				</div>
-					<div class="modal-footer">
-						<button type="submit" class="btn btn-primary btn-save">
-							<i class="glyphicon glyphicon-floppy-disk"></i>
-							Simpan
-						</button>
+		</div>
+			<div class="modal-footer">';
+
+	if ($save) {
+		echo '
+			<button type="submit" class="btn btn-primary btn-save">
+				<i class="glyphicon glyphicon-floppy-disk"></i>
+				Simpan
+			</button>';
+	}
+
+	if ($special!="") {
+		echo '
+			<button type="button" class="btn btn-primary btn-'.$special.'">
+				<i class="glyphicon glyphicon-print"></i>
+				'.$special.'
+			</button>';
+	}
+
+	echo '					
 						<button type="button" class="btn btn-warning" 
 								data-dismiss="modal" 
 								aria-label="Close">

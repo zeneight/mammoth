@@ -1,5 +1,5 @@
 <?php
-namespace application\controllers;
+namespace src\application\controllers;
 use Controller;
 /**
 * Main Controller untuk template ini

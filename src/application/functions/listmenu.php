@@ -76,12 +76,23 @@ if ($_SESSION["username"]=="operator") {
 		</div>
 		<div class="navbar-collapse collapse" id="navbar-main">
 			<ul class="nav navbar-nav">
+				<?php
+				/*
 				<li class="dropdown <?php echo $profil; ?>">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Pengaturan<span class="caret"></span></a>
 					<ul class="dropdown-menu" aria-labelledby="download">
 						<li><a tabindex="-1" href="<?php echo BASE_URL; ?>admin/menu">Manajemen Menu</a></li>
 					</ul>
 				</li>
+				<li class="dropdown <?php echo $mberita; ?>">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Blog <span class="caret"></span></a>
+					<ul class="dropdown-menu" aria-labelledby="download">
+						<li><a href="<?php echo BASE_URL; ?>admin/katberita">Kategori</a></li>
+						<li><a href="<?php echo BASE_URL; ?>admin/berita">Blog</a></li>
+					</ul>
+				</li>
+				*/
+				?>
 
 				<li class="dropdown <?php echo $mberita; ?>">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Produk <span class="caret"></span></a>
@@ -92,10 +103,9 @@ if ($_SESSION["username"]=="operator") {
 				</li>
 
 				<li class="dropdown <?php echo $mberita; ?>">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Blog <span class="caret"></span></a>
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Member <span class="caret"></span></a>
 					<ul class="dropdown-menu" aria-labelledby="download">
-						<li><a href="<?php echo BASE_URL; ?>admin/katberita">Kategori</a></li>
-						<li><a href="<?php echo BASE_URL; ?>admin/berita">Blog</a></li>
+						<li><a href="<?php echo BASE_URL; ?>admin/member">Member</a></li>
 					</ul>
 				</li>
 

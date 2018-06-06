@@ -18,7 +18,7 @@ class View {
 	public function render() {
 		$this->isRender = TRUE;
 		extract($this->data);
-		$view = ROOT."/application/views/".$this->viewName.".view.php";
+		$view = ROOT."/src/application/views/".$this->viewName.".view.php";
 
 		if (file_exists($view)) require_once $view;
 		else echo('Modul View tidak ditemukan!');

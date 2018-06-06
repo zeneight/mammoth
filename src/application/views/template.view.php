@@ -60,7 +60,7 @@ $metatag["favicon"]           = BASE_PATH."assets/images/pengaturan/thumbs/".$pe
 // memanggil semua fungsi
 $function = array("html", "rupiah", "frontweb", "metatag");
 foreach ($function as $func) {
-	require_once ROOT."/application/functions/function_".$func.".php";
+	require_once ROOT."/src/application/functions/function_".$func.".php";
 }
 
 // pengaturan slide template

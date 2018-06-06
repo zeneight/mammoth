@@ -1,7 +1,7 @@
 <!-- <h2 class="page-header">Dashboard</h2> -->
 <div class="row">
 <?php
-	create_panel("teal", "th-large", $data['jmlkategori'], "Jumlah Kategori");
+	create_panel("teal", "user", $data['jmlmember'], "Jumlah Member");
 	create_panel("blue", "gift", $data['jmlproduk'], "Jumlah Produk");
 	create_panel("orange", "shopping-cart", $data['jmltransaksi'], "Jumlah Transaksi");
 	create_panel("red", "envelope", $data['jmlpesan'], "Pesan");

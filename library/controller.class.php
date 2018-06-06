@@ -8,7 +8,7 @@ class Controller {
 	}
 
 	protected function model($modelName) {
-		require_once ROOT."/application/models/".$modelName.".model.php";
+		require_once ROOT."/src/application/models/".$modelName.".model.php";
 		$className = ucfirst($modelName)."Model";
 		$this->$modelName = new $className();
 	}

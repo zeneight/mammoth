@@ -1,5 +1,5 @@
 <?php
-use \application\controllers\AdminMainController;
+use src\application\controllers\AdminMainController;
 
 /**
 *  Dashboard
@@ -7,6 +7,10 @@ use \application\controllers\AdminMainController;
 class DashboardController extends AdminMainController
 {
 	public function index() {
+		$this->model("member");
+		$query = $this->member->selectAll();
+		$jmlmember = $this->member->getRows($query);
+
 		$this->model("kategori");
 		$query = $this->kategori->selectAll();
 		$jmlkategori = $this->kategori->getRows($query);
@@ -61,6 +65,7 @@ class DashboardController extends AdminMainController
 		// menggabungkan semua data yang akan dikirim ke view pada variabel data
 		$data = array(
 			'jmlkategori' => $jmlkategori,
+			'jmlmember' => $jmlmember,
 			'jmlproduk' => $jmlproduk,
 			'jmltransaksi' => $jmltransaksi,
 			'jmlpesan' => $jmlpesan,

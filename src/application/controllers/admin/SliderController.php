@@ -1,5 +1,5 @@
 <?php
-use \application\controllers\AdminMainController;
+use src\application\controllers\AdminMainController;
 /**
 * 
 */
@@ -17,7 +17,7 @@ class SliderController extends AdminMainController
 	}
 
 	public function listData() {
-		require_once ROOT."/application/functions/function_action.php";
+		require_once ROOT."/src/application/functions/function_action.php";
 		// require_once ROOT."/application/functions/function_rupiah.php";
 
 		$query 	= $this->slider->selectAll("id_slider", "DESC");

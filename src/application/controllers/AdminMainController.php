@@ -1,5 +1,5 @@
 <?php
-namespace application\controllers;
+namespace src\application\controllers;
 use \Controller;
 
 class AdminMainController extends Controller
@@ -26,7 +26,7 @@ class AdminMainController extends Controller
 		}
 
 		// ambil fungsi html
-		require_once(ROOT.DS."application/functions/function_html.php");
+		require_once(ROOT.DS."src/application/functions/function_html.php");
 	}
 
 	public function template($viewName, $bc='', $data=array()) {

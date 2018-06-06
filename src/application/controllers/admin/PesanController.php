@@ -1,5 +1,5 @@
 <?php
-use \application\controllers\AdminMainController;
+use src\application\controllers\AdminMainController;
 /**
 * 
 */

@@ -5,7 +5,7 @@
 class AdminController extends Controller
 {
 	private function getController($controller, $action='', $parameter='') {
-		$controllerPath = ROOT .DS. "application" .DS. "controllers" .DS. "admin" .DS.ucfirst($controller . "Controller.php");
+		$controllerPath = ROOT .DS. "src/application" .DS. "controllers" .DS. "admin" .DS.ucfirst($controller . "Controller.php");
 
 		if(file_exists($controllerPath)) {
 			require_once($controllerPath);
@@ -36,6 +36,10 @@ class AdminController extends Controller
 
 	public function katberita($action='', $parameter='') {
 		$this->getController('katberita', $action, $parameter);
+	}
+
+	public function member($action='', $parameter='') {
+		$this->getController('member', $action, $parameter);
 	}
 
 	public function produk($action='', $parameter='') {

@@ -47,10 +47,15 @@ class Model {
 		return $this->_dbHandle->errorInfo();
 	}
 
-	public function getId() {
+	public function getId($column="id") {
 		/*return mysqli_insert_id($this->_dbHandle);*/
-		$stmt 	= $this->_dbHandle->query("SELECT LAST_INSERT_ID()");
-		return $stmt->fetchColumn();
+		/*$stmt 	= $this->_dbHandle->query("SELECT max($column) FROM $this->_table");
+		return $stmt->fetch();*/
+		
+		$stmt = $this->_dbHandle->prepare("SELECT MAX($column) AS max_id FROM $this->_table");
+		$stmt->execute();
+		$invNum = $stmt->fetch();
+		return $invNum['max_id'];
 	}
 
 

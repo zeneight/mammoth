@@ -1,5 +1,6 @@
 <?php
-use \application\controllers\MainController;
+use \src\application\controllers\MainController;
+
 /**
 * Controller Home
 */
@@ -11,7 +12,7 @@ class HomeController extends MainController
 		$this->model("pengaturan");
 		$this->model("produk");
 		$this->model("kategori");
-		require_once(ROOT.DS."application/functions/function_frontweb.php");
+		require_once(ROOT.DS."src/application/functions/function_frontweb.php");
 	}
 
 	public function index() {

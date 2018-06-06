@@ -53,7 +53,7 @@ function callHook() {
 	$urlArray 	= explode("/", $url);
 	$controller	= (!empty($urlArray[0])) ? $urlArray[0] : DEFAULT_CONTROLLER;
 	
-	$controllerPath = ROOT.'/application/controllers/'.ucfirst($controller).'Controller.php';
+	$controllerPath = ROOT.'/src/application/controllers/'.ucfirst($controller).'Controller.php';
 
 	if (file_exists($controllerPath)) {
 		array_shift($urlArray);
